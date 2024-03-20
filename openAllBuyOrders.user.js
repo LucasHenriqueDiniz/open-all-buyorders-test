@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Open All buy orders in new tab test
 // @namespace    https://github.com/LucasHenriqueDiniz
-// @version      0.2
+// @version      0.2.1
 // @description  eh
 // @author       Lucas Diniz
 // @match        https://mannco.store/profile
@@ -19,7 +19,7 @@
 
 (function () {
     "use strict";
-  const maxLoop = 100;
+    var maxLoop = 100;
     let currentLoop = 1; // Define o número inicial da página
     const delayvalue = 750;
 
@@ -41,10 +41,16 @@
             buyorders.forEach((order, i) => {
                 console.log(`Pedido ${i + 1}:`, order);
                 // handle logic for each item
-                let orderLink = order.querySelector("a").parentElement.lastElementChild.href;
+                try {
+                    let orderLink = order.querySelector("a").parentElement.lastElementChild.href;
 
-                if (orderLink) {
-                    buyOrdersLinks.push(orderLink);
+                    if (orderLink) {
+                        buyOrdersLinks.push(orderLink);
+                    }
+                } catch(err) {
+                    console.log(err)
+                    runStatus.textContent = "Error";
+                    saveButton.disabled = false;
                 }
             });
         } else {
