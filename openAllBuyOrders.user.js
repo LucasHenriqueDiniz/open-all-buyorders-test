@@ -1,12 +1,19 @@
 // ==UserScript==
 // @name         Open All buy orders in new tab test
 // @namespace    https://github.com/LucasHenriqueDiniz
-// @version      2024-03-16
+// @version      0.2
 // @description  eh
 // @author       Lucas Diniz
 // @match        https://mannco.store/profile
 // @icon         https://www.google.com/s2/favicons?sz=64&domain=mannco.store
 // @require      https://cdn.jsdelivr.net/npm/file-saver@2.0.5/dist/FileSaver.min.js
+
+
+// @homepageURL  https://github.com/LucasHenriqueDiniz/openAllBuyOrders.user.js
+// @supportURL   https://github.com/LucasHenriqueDiniz/openAllBuyOrders.user.js/issues
+// @downloadURL  https://github.com/LucasHenriqueDiniz/open-all-buyorders-test/raw/main/openAllBuyOrders.user.js
+// @updateURL    https://github.com/LucasHenriqueDiniz/open-all-buyorders-test/raw/main/openAllBuyOrders.user.js
+
 // @grant        GM_openInTab
 // ==/UserScript==
 
